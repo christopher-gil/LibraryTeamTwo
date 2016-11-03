@@ -1,0 +1,20 @@
+Format: 1.8
+Date: Thu, 3 Nov 2016 15:13:32 +0000
+Source: DiscoveryDiary
+Binary: DiscoveryDiary
+Architecture: all
+Version: 1
+Distribution: unknown
+Urgency: low
+Maintainer: Unspecified
+Changed-By: Unspecified
+Description:
+ DiscoveryDiary - (Dropwizard Application)
+Changes:
+ DiscoveryDiary (1) unknown; urgency=low
+Checksums-Sha1:
+ 7b55b508191fee267b3727f832050bdadad0da82 16236412 DiscoveryDiary-1.deb
+Checksums-Sha256:
+ 2098830d2bbf1ee8d40cc07c06a8783b3d5ed2cdbcdfee1388ed14e39ca3cf57 16236412 DiscoveryDiary-1.deb
+Files:
+ 87910542d1f5be5dfa634bbcab99675f 16236412 misc low DiscoveryDiary-1.deb

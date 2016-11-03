@@ -13,7 +13,17 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="pre-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="https://www.kainos.com/wp-content/themes/kainos.com/images/Kainos-Logo.png?52a20e">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -22,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/home">Discovery Diary</a>
+          <!--<a class="navbar-brand" href="/home">Discovery Diary</a>-->
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
