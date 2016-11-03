@@ -1,0 +1,12 @@
+[Unit]
+Description=DiscoveryDiary
+
+[Service]
+ExecStart=/usr/bin/DiscoveryDiary
+Restart=always
+OOMScoreAdjust=-1000
+User=dropwizard
+Group=dropwizard
+
+[Install]
+WantedBy=multi-user.target
