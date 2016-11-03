@@ -1,7 +1,32 @@
 body {
-  padding-top: 50px;
+  background-color: #e8e8e8;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+.navbar-header{
+  background-color:#252D4F;
+}
+
+.pre-nav{
+  background-color: #FFFFFF;
+  line-height: 140px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #FFF;
+}
+
+.navbar-inverse {
+    color: #FFF;
+    background-color:#252D4F;
+}
+
+.navbar-inverse .navbar-nav>li {
+  text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+  transition: 300ms ease-in-out;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+  background: rgba(255,255,255, .1);
 }
