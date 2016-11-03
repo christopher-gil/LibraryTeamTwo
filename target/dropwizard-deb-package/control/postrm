@@ -1,9 +1,0 @@
-#!/bin/sh
-
-case "$1" in
-    purge)
-        rm -rf "/var/log/DiscoveryDiary"
-    ;;
-esac
-
-exit 0
