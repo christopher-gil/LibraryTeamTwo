@@ -17,7 +17,7 @@ public class BookDataStore {
 
     private static List<Book> books = Lists.newArrayList();
 
-    public List<Book> getPeople() {
+    public List<Book> getBooks() {
         return books;
     }
 

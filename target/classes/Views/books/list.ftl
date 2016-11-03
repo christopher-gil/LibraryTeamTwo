@@ -3,13 +3,11 @@
 
 <@layoutTemplate.layout>
 
-<h1>People list</h1>
-<p class="lead">Registered people.</p>
+<h1>Book list</h1>
 
 <table class="table">
     <thead>
         <th>Name</th>
-        <th>Age</th>
     </thead>
 
     <tbody>
@@ -24,7 +22,5 @@
 
     </tbody>
 </table>
-
-<a class="btn btn-default" href="/people/add">New</a>
 
 </@layoutTemplate.layout>

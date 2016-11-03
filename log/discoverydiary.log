@@ -1,0 +1,262 @@
+INFO  [2016-11-03 14:58:51,520] io.dropwizard.cli.CheckCommand: Configuration is OK
+INFO  [2016-11-03 14:58:53,854] org.eclipse.jetty.util.log: Logging initialized @1069ms
+INFO  [2016-11-03 14:58:53,930] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2016-11-03 14:58:53,961] io.dropwizard.server.ServerFactory: Starting DiscoveryDiaryApplication
+INFO  [2016-11-03 14:58:54,065] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 14:58:54,066] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 14:58:54,070] org.eclipse.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+INFO  [2016-11-03 14:58:54,679] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /books (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    POST    /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     / (com.kainos.discoverydiary.resources.HomeResource)
+    GET     /book/list (com.kainos.discoverydiary.resources.BookResource)
+
+INFO  [2016-11-03 14:58:54,681] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@3b08f438{/,null,AVAILABLE}
+INFO  [2016-11-03 14:58:54,686] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2016-11-03 14:58:54,686] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2016-11-03 14:58:54,689] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@257cc1fc{/,null,AVAILABLE}
+INFO  [2016-11-03 14:58:54,699] org.eclipse.jetty.server.ServerConnector: Started application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 14:58:54,700] org.eclipse.jetty.server.ServerConnector: Started admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 14:58:54,701] org.eclipse.jetty.server.Server: Started @1917ms
+INFO  [2016-11-03 15:00:16,698] org.eclipse.jetty.server.ServerConnector: Stopped application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:00:16,700] org.eclipse.jetty.server.ServerConnector: Stopped admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:00:16,701] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@257cc1fc{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:00:16,704] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@3b08f438{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:00:29,304] io.dropwizard.cli.CheckCommand: Configuration is OK
+INFO  [2016-11-03 15:00:31,787] org.eclipse.jetty.util.log: Logging initialized @1072ms
+INFO  [2016-11-03 15:00:31,850] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2016-11-03 15:00:31,884] io.dropwizard.server.ServerFactory: Starting DiscoveryDiaryApplication
+INFO  [2016-11-03 15:00:31,989] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:00:31,989] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:00:31,992] org.eclipse.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+INFO  [2016-11-03 15:00:32,653] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /books (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    POST    /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     / (com.kainos.discoverydiary.resources.HomeResource)
+    GET     /book/list (com.kainos.discoverydiary.resources.BookResource)
+
+INFO  [2016-11-03 15:00:32,655] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@3b08f438{/,null,AVAILABLE}
+INFO  [2016-11-03 15:00:32,661] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2016-11-03 15:00:32,661] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2016-11-03 15:00:32,665] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@257cc1fc{/,null,AVAILABLE}
+INFO  [2016-11-03 15:00:32,676] org.eclipse.jetty.server.ServerConnector: Started application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:00:32,677] org.eclipse.jetty.server.ServerConnector: Started admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:00:32,678] org.eclipse.jetty.server.Server: Started @1963ms
+INFO  [2016-11-03 15:02:05,057] org.eclipse.jetty.server.ServerConnector: Stopped application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:02:05,062] org.eclipse.jetty.server.ServerConnector: Stopped admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:02:05,063] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@257cc1fc{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:02:05,068] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@3b08f438{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:02:16,351] io.dropwizard.cli.CheckCommand: Configuration is OK
+INFO  [2016-11-03 15:02:18,902] org.eclipse.jetty.util.log: Logging initialized @1107ms
+INFO  [2016-11-03 15:02:18,977] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2016-11-03 15:02:19,028] io.dropwizard.server.ServerFactory: Starting DiscoveryDiaryApplication
+INFO  [2016-11-03 15:02:19,147] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:02:19,147] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:02:19,150] org.eclipse.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+INFO  [2016-11-03 15:02:19,835] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /books (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    POST    /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     / (com.kainos.discoverydiary.resources.HomeResource)
+    GET     /book/list (com.kainos.discoverydiary.resources.BookResource)
+
+INFO  [2016-11-03 15:02:19,837] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@3b08f438{/,null,AVAILABLE}
+INFO  [2016-11-03 15:02:19,842] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2016-11-03 15:02:19,845] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2016-11-03 15:02:19,852] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@257cc1fc{/,null,AVAILABLE}
+INFO  [2016-11-03 15:02:19,863] org.eclipse.jetty.server.ServerConnector: Started application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:02:19,865] org.eclipse.jetty.server.ServerConnector: Started admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:02:19,866] org.eclipse.jetty.server.Server: Started @2072ms
+INFO  [2016-11-03 15:02:35,265] org.eclipse.jetty.server.ServerConnector: Stopped application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:02:35,269] org.eclipse.jetty.server.ServerConnector: Stopped admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:02:35,270] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@257cc1fc{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:02:35,273] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@3b08f438{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:02:46,169] io.dropwizard.cli.CheckCommand: Configuration is OK
+INFO  [2016-11-03 15:02:48,721] org.eclipse.jetty.util.log: Logging initialized @1157ms
+INFO  [2016-11-03 15:02:48,802] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2016-11-03 15:02:48,851] io.dropwizard.server.ServerFactory: Starting DiscoveryDiaryApplication
+INFO  [2016-11-03 15:02:48,960] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:02:48,960] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:02:48,964] org.eclipse.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+INFO  [2016-11-03 15:02:49,627] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /books (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    POST    /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     / (com.kainos.discoverydiary.resources.HomeResource)
+    GET     /book/list (com.kainos.discoverydiary.resources.BookResource)
+
+INFO  [2016-11-03 15:02:49,629] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@3b08f438{/,null,AVAILABLE}
+INFO  [2016-11-03 15:02:49,634] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2016-11-03 15:02:49,635] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2016-11-03 15:02:49,640] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@257cc1fc{/,null,AVAILABLE}
+INFO  [2016-11-03 15:02:49,651] org.eclipse.jetty.server.ServerConnector: Started application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:02:49,653] org.eclipse.jetty.server.ServerConnector: Started admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:02:49,653] org.eclipse.jetty.server.Server: Started @2091ms
+INFO  [2016-11-03 15:03:24,291] org.eclipse.jetty.server.ServerConnector: Stopped application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:03:24,291] org.eclipse.jetty.server.ServerConnector: Stopped admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:03:24,292] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@257cc1fc{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:03:24,295] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@3b08f438{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:03:35,571] io.dropwizard.cli.CheckCommand: Configuration is OK
+INFO  [2016-11-03 15:03:38,090] org.eclipse.jetty.util.log: Logging initialized @1129ms
+INFO  [2016-11-03 15:03:38,181] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2016-11-03 15:03:38,239] io.dropwizard.server.ServerFactory: Starting DiscoveryDiaryApplication
+INFO  [2016-11-03 15:03:38,358] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:03:38,359] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:03:38,362] org.eclipse.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+INFO  [2016-11-03 15:03:39,037] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /books (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    POST    /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     / (com.kainos.discoverydiary.resources.HomeResource)
+    GET     /book/list (com.kainos.discoverydiary.resources.BookResource)
+
+INFO  [2016-11-03 15:03:39,040] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@3b08f438{/,null,AVAILABLE}
+INFO  [2016-11-03 15:03:39,049] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2016-11-03 15:03:39,049] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2016-11-03 15:03:39,054] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@257cc1fc{/,null,AVAILABLE}
+INFO  [2016-11-03 15:03:39,061] org.eclipse.jetty.server.ServerConnector: Started application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:03:39,063] org.eclipse.jetty.server.ServerConnector: Started admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:03:39,063] org.eclipse.jetty.server.Server: Started @2104ms
+INFO  [2016-11-03 15:04:05,494] org.eclipse.jetty.server.ServerConnector: Stopped application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:04:05,495] org.eclipse.jetty.server.ServerConnector: Stopped admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:04:05,496] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@257cc1fc{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:04:05,501] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@3b08f438{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:04:21,362] io.dropwizard.cli.CheckCommand: Configuration is OK
+INFO  [2016-11-03 15:04:23,847] org.eclipse.jetty.util.log: Logging initialized @1091ms
+INFO  [2016-11-03 15:04:23,923] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2016-11-03 15:04:23,966] io.dropwizard.server.ServerFactory: Starting DiscoveryDiaryApplication
+INFO  [2016-11-03 15:04:24,076] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:04:24,077] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:04:24,088] org.eclipse.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+INFO  [2016-11-03 15:04:24,737] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /books (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    POST    /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     / (com.kainos.discoverydiary.resources.HomeResource)
+    GET     /book/list (com.kainos.discoverydiary.resources.BookResource)
+
+INFO  [2016-11-03 15:04:24,739] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@3b08f438{/,null,AVAILABLE}
+INFO  [2016-11-03 15:04:24,743] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2016-11-03 15:04:24,744] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2016-11-03 15:04:24,749] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@257cc1fc{/,null,AVAILABLE}
+INFO  [2016-11-03 15:04:24,759] org.eclipse.jetty.server.ServerConnector: Started application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:04:24,761] org.eclipse.jetty.server.ServerConnector: Started admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:04:24,762] org.eclipse.jetty.server.Server: Started @2006ms
+INFO  [2016-11-03 15:05:20,793] org.eclipse.jetty.server.ServerConnector: Stopped application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:05:20,794] org.eclipse.jetty.server.ServerConnector: Stopped admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:05:20,795] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@257cc1fc{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:05:20,798] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@3b08f438{/,null,UNAVAILABLE}
+INFO  [2016-11-03 15:05:33,088] io.dropwizard.cli.CheckCommand: Configuration is OK
+INFO  [2016-11-03 15:05:35,716] org.eclipse.jetty.util.log: Logging initialized @1084ms
+INFO  [2016-11-03 15:05:35,789] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2016-11-03 15:05:35,821] io.dropwizard.server.ServerFactory: Starting DiscoveryDiaryApplication
+INFO  [2016-11-03 15:05:35,908] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:05:35,908] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:05:35,911] org.eclipse.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+INFO  [2016-11-03 15:05:36,553] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /books (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    POST    /books/add (com.kainos.discoverydiary.resources.PeopleResource)
+    GET     / (com.kainos.discoverydiary.resources.HomeResource)
+    GET     /book/list (com.kainos.discoverydiary.resources.BookResource)
+
+INFO  [2016-11-03 15:05:36,555] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@3b08f438{/,null,AVAILABLE}
+INFO  [2016-11-03 15:05:36,560] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2016-11-03 15:05:36,561] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2016-11-03 15:05:36,569] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@257cc1fc{/,null,AVAILABLE}
+INFO  [2016-11-03 15:05:36,579] org.eclipse.jetty.server.ServerConnector: Started application@5316e95f{HTTP/1.1}{0.0.0.0:8901}
+INFO  [2016-11-03 15:05:36,581] org.eclipse.jetty.server.ServerConnector: Started admin@3f053c80{HTTP/1.1}{0.0.0.0:8902}
+INFO  [2016-11-03 15:05:36,581] org.eclipse.jetty.server.Server: Started @1949ms

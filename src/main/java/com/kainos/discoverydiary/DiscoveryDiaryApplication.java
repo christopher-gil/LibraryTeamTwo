@@ -22,7 +22,7 @@ public class DiscoveryDiaryApplication extends Application<DiscoveryDiaryConfigu
     public void run(DiscoveryDiaryConfiguration discoveryDiaryConfiguration, Environment environment) throws Exception {
         final HomeResource homeResource = new HomeResource();
         final PeopleResource peopleResource = new PeopleResource(new DataStore(), discoveryDiaryConfiguration);
-        final BookResource bookResource = new BookResource(new DataStore());
+        final BookResource bookResource = new BookResource(new BookDataStore());
 
         environment.jersey().register(homeResource);
         environment.jersey().register(peopleResource);

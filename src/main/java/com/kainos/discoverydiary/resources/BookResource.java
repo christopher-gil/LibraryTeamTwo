@@ -3,6 +3,7 @@ package com.kainos.discoverydiary.resources;
 import com.codahale.metrics.annotation.Timed;
 import com.kainos.discoverydiary.BookDataStore;
 import com.kainos.discoverydiary.config.DiscoveryDiaryConfiguration;
+import com.kainos.discoverydiary.views.BooksListView;
 import io.dropwizard.views.View;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +16,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * Created by ciaram on 03/11/2016.
  */
-@Path("book")
+@Path("/book")
 public class BookResource {
 
     final BookDataStore bookDataStore;
@@ -24,7 +25,7 @@ public class BookResource {
         this.bookDataStore = bookDataStore;
     }
 
-    @Path("list")
+    @Path("/list")
     @GET
     @Timed
     @Produces(MediaType.TEXT_HTML)
