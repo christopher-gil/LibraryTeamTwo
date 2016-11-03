@@ -3,8 +3,6 @@
 
 <@layoutTemplate.layout>
 
-<h1>Book list</h1>
-
 <table class="table">
     <thead>
         <th>Title</th>
