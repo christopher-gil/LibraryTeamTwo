@@ -1,0 +1,30 @@
+<#-- @ftlvariable name="" type="com.kainos.discoverydiary.views.PeopleListView" -->
+<#import "../layout.ftl" as layoutTemplate>
+
+<@layoutTemplate.layout>
+
+<h1>People list</h1>
+<p class="lead">Registered people.</p>
+
+<table class="table">
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+
+    <tbody>
+        <#list books as book>
+            <tr>
+            <td>
+                ${book.title}
+            </td>
+
+            </tr>
+        </#list>
+
+    </tbody>
+</table>
+
+<a class="btn btn-default" href="/people/add">New</a>
+
+</@layoutTemplate.layout>

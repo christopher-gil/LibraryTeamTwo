@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@Path("people")
+@Path("books")
 public class PeopleResource {
 
     final static Logger LOGGER = LoggerFactory.getLogger(PeopleResource.class);
@@ -39,7 +39,7 @@ public class PeopleResource {
     @GET
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View index(){
+     public View index(){
         return new PeopleListView(dataStore.getPeople());
     }
 
@@ -80,7 +80,7 @@ public class PeopleResource {
         LOGGER.info("Registering person " + String.format("id: %s name: %s age: %s", idForNewPerson, name, age));
         dataStore.registerPerson(idForNewPerson, name, age);
 
-        URI peopleListUri = UriBuilder.fromUri("/people").build();
+        URI peopleListUri = UriBuilder.fromUri("/books").build();
         Response response = Response.seeOther(peopleListUri).build();
         throw new WebApplicationException(response); // valid way to redirect in dropwizard
     }
