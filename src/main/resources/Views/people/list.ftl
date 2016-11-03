@@ -29,4 +29,6 @@
 
 <a class="btn btn-default" href="/people/add">New</a>
 
+    <script src="/assets/js/Booklist.js"></script>
+
 </@layoutTemplate.layout>
