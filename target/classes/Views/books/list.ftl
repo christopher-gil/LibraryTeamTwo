@@ -13,14 +13,12 @@
     </thead>
 
     <tbody>
-        <#list people as person>
+        <#list books as book>
             <tr>
             <td>
-                ${person.name}
+                ${book.title}
             </td>
-            <td>
-                ${person.age}
-            </td>
+
             </tr>
         </#list>
 
