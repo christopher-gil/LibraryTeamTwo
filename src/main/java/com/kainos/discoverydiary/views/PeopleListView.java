@@ -1,5 +1,6 @@
 package com.kainos.discoverydiary.views;
 
+import com.kainos.discoverydiary.models.Book;
 import com.kainos.discoverydiary.models.Person;
 import io.dropwizard.views.View;
 
@@ -10,11 +11,11 @@ public class PeopleListView extends View {
     private final List<Person> people;
 
     public PeopleListView(List<Person> people) {
-        super("/Views/people/list.ftl");
+        super("/Views/books/list.ftl");
         this.people = people;
     }
 
-    public List<Person> getPeople() {
+    public List<Person> getBooks() {
         return people;
     }
 }
