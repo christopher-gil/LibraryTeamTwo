@@ -1,6 +1,7 @@
 package com.kainos.discoverydiary;
 
 import com.kainos.discoverydiary.config.DiscoveryDiaryConfiguration;
+import com.kainos.discoverydiary.resources.BookResource;
 import com.kainos.discoverydiary.resources.HomeResource;
 import com.kainos.discoverydiary.resources.PeopleResource;
 import io.dropwizard.Application;
@@ -21,9 +22,11 @@ public class DiscoveryDiaryApplication extends Application<DiscoveryDiaryConfigu
     public void run(DiscoveryDiaryConfiguration discoveryDiaryConfiguration, Environment environment) throws Exception {
         final HomeResource homeResource = new HomeResource();
         final PeopleResource peopleResource = new PeopleResource(new DataStore(), discoveryDiaryConfiguration);
+        final BookResource bookResource = new BookResource(new DataStore());
 
         environment.jersey().register(homeResource);
         environment.jersey().register(peopleResource);
+        environment.jersey().register(bookResource);
     }
 
     public static void main(String[] args) throws Exception {
