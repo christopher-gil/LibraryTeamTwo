@@ -34,7 +34,7 @@ public class BookResource {
     @GET
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View bookList(){
+    public View bookList() {
         return new BooksListView(bookDataStore.getBooks());
     }
 
@@ -42,7 +42,7 @@ public class BookResource {
     @GET
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View getBook(@PathParam("id") int id){
+    public View getBook(@PathParam("id") int id) {
         return new BookView(bookDataStore.getBook(id));
     }
 
@@ -50,12 +50,25 @@ public class BookResource {
     @POST
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public Response borrow(@FormParam("borrower") String borrower, @FormParam("id") int id){
+    public Response borrow(@FormParam("borrower") String borrower, @FormParam("idBorrow") int id) {
         Book book = bookDataStore.getBook(id);
         book.setIsBorrowed(true);
         book.setBorrowedOn(DateTime.now());
         book.setBorrowedBy(borrower);
-        URI uri = UriBuilder.fromUri("/book/"+id).build();
+        URI uri = UriBuilder.fromUri("/book/" + id).build();
+        return Response.seeOther(uri).build();
+    }
+
+    @Path("/return")
+    @POST
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public Response returnBook(@FormParam("idReturn") int id) {
+        Book book = bookDataStore.getBook(id);
+        book.setIsBorrowed(false);
+        book.setBorrowedOn(null);
+        book.setBorrowedBy(null);
+        URI uri = UriBuilder.fromUri("/book/" + id).build();
         return Response.seeOther(uri).build();
     }
 }
