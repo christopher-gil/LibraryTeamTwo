@@ -20,6 +20,4 @@ public class BooksListView extends View {
     public List<Book> getBooks() {
         return books;
     }
-
-
 }

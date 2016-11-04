@@ -2,7 +2,7 @@ package com.kainos.discoverydiary.resources;
 
 import com.codahale.metrics.annotation.Timed;
 import com.kainos.discoverydiary.BookDataStore;
-import com.kainos.discoverydiary.config.DiscoveryDiaryConfiguration;
+import com.kainos.discoverydiary.views.BookView;
 import com.kainos.discoverydiary.views.BooksAddView;
 import com.kainos.discoverydiary.views.BooksListView;
 import io.dropwizard.views.View;
@@ -10,8 +10,6 @@ import jersey.repackaged.com.google.common.collect.Lists;
 import org.assertj.core.util.Strings;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.joda.time.DateTime;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -60,7 +58,7 @@ public class BookResource {
                         @FormDataParam("publisher") String publisher,
                         @FormDataParam("datePublished") String datePublished,
                         @FormDataParam("description") String description,
-                        @FormDataParam("location") String location){
+                        @FormDataParam("location") String location) {
 
         List<String> errors = Lists.newArrayList();
 
@@ -80,5 +78,14 @@ public class BookResource {
         URI peopleListUri = UriBuilder.fromUri("/book/list").build();
         Response response = Response.seeOther(peopleListUri).build();
         throw new WebApplicationException(response); // valid way to redirect in dropwizard
+
+    }
+
+    @Path("/{id}")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public View getBook(@PathParam("id") int id){
+        return new BookView(bookDataStore.getBook(id));
     }
 }
