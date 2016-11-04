@@ -5,6 +5,7 @@ import com.kainos.discoverydiary.models.Book;
 import org.joda.time.DateTime;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BookDataStore {
 
@@ -30,5 +31,22 @@ public class BookDataStore {
 
     public Book getBook(int id) {
         return books.stream().filter(b -> b.getId() == id).findFirst().get();
+    }
+
+    public List<Book> getSearchedBooks(String author, DateTime datePublished, String description, String category) {
+        List<Book> searchedBooks = books;
+        if(author != ""){
+            searchedBooks = books.stream().filter((i) -> i.getAuthor() == author).collect(Collectors.toList());
+        }
+        if(datePublished != null){
+            searchedBooks = books.stream().filter((i) -> i.getDatePublished() == datePublished).collect(Collectors.toList());
+        }
+        if(description != ""){
+            searchedBooks = books.stream().filter((i) -> i.getDescription() == description).collect(Collectors.toList());
+        }
+        if(category != ""){
+            searchedBooks = books.stream().filter((i) -> i.getCategory() == category).collect(Collectors.toList());
+        }
+        return searchedBooks;
     }
 }
