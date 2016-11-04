@@ -4,6 +4,7 @@ import com.codahale.metrics.annotation.Timed;
 import com.kainos.discoverydiary.BookDataStore;
 import com.kainos.discoverydiary.config.DiscoveryDiaryConfiguration;
 import com.kainos.discoverydiary.views.BooksListView;
+import com.kainos.discoverydiary.views.AdvancedSearchView;
 import io.dropwizard.views.View;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,15 @@ public class BookResource {
         this.bookDataStore = bookDataStore;
         bookDataStore.constructBooks();
     }
+
+    @Path("/advancedSearch")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+      public View advancedSearch(){
+        return new AdvancedSearchView();
+      }
+
 
     @Path("/list")
     @GET
