@@ -8,7 +8,7 @@
     <h1>Enter search details</h1>
     <p class="lead">Please provide details for an advanced search.</p>
 
-    <form enctype="multipart/form-data" action="/people/add" method="post" autocomplete="off">
+    <form enctype="multipart/form-data" action="/book/list" method="post" autocomplete="off">
 
         <#if errors??>
             <div class="bg-danger text-danger">
@@ -25,22 +25,22 @@
 
         <div class="form-group">
             <label for="author">Author</label>
-            <input name="author" id="authorValue" type="text" placeholder="author" class="form-control" required />
+            <input name="author" id="authorValue" type="text" placeholder="author" class="form-control"/>
         </div>
 
         <div class="form-group">
             <label for="publicationDate">Date of Publication</label>
-            <input name="publicationDate" id="publicationValue" type="text" placeholder="publication date" class="form-control" required />
+            <input name="publicationDate" id="publicationValue" type="text" placeholder="publication date" class="form-control"/>
         </div>
 
         <div class="form-group">
             <label for="description">Description</label>
-            <input name="description" id="descriptionValue" type="text" placeholder="description" class="form-control" required />
+            <input name="description" id="descriptionValue" type="text" placeholder="description" class="form-control"/>
         </div>
 
         <div class="form-group">
             <label for="category">Category</label>
-            <input name="category" id="categoryValue" type="text" placeholder="category" class="form-control" required />
+            <input name="category" id="categoryValue" type="text" placeholder="category" class="form-control"/>
         </div>
 
         <input type="submit" value="Confirm" class="btn btn-primary" />
