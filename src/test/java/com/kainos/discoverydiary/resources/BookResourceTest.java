@@ -3,6 +3,7 @@ package com.kainos.discoverydiary.resources;
 import com.codahale.metrics.MetricRegistry;
 import com.kainos.discoverydiary.BookDataStore;
 import io.dropwizard.testing.junit.ResourceTestRule;
+import io.dropwizard.views.View;
 import io.dropwizard.views.ViewMessageBodyWriter;
 import io.dropwizard.views.ViewRenderer;
 import io.dropwizard.views.freemarker.FreemarkerViewRenderer;
@@ -57,4 +58,9 @@ public class BookResourceTest {
         Assert.assertEquals(result, true);
     }
 
+    @Test
+    public void getBook_ValidId_ReturnsBook(){
+        bookResource = new BookResource(bookDataStore);
+        Assert.assertTrue(bookResource.getBook(1) instanceof View);
+    }
 }
