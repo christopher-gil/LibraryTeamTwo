@@ -16,6 +16,10 @@ public class Book {
     public Book() {
     }
 
+    public Book(String title){
+        this.title = title;
+    }
+
     public Book(int id, String title, String category, String author, String publisher, DateTime datePublished, String description, String location) {
         this.id = id;
         this.title = title;
