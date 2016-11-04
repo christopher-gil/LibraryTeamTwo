@@ -36,7 +36,7 @@ public class BookDataStore {
 
     public List<Book> getSearchedBooks(String author, DateTime datePublished, String description, String category) {
         List<Book> searchedBooks = books;
-        if(author != ""){
+        /*if(author != ""){
             searchedBooks = books.stream().filter((i) -> i.getAuthor() == author).collect(Collectors.toList());
         }
         if(datePublished != null){
@@ -47,7 +47,7 @@ public class BookDataStore {
         }
         if(category != ""){
             searchedBooks = books.stream().filter((i) -> i.getCategory() == category).collect(Collectors.toList());
-        }
+        }*/
         return searchedBooks;
     }
 
