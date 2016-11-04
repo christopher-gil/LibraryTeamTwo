@@ -1,5 +1,6 @@
 package com.kainos.discoverydiary.models;
 
+import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +26,7 @@ public class BookTest {
 
     @Test
     public void bookConstructor_ValidTitle_ReturnsInstanceOfBook(){
-        Assert.assertTrue(new Book("Valid Title") instanceof Book);
+        Assert.assertTrue(new Book(1, "Real World SharePoint 2007", "", "Development", "Wrox", DateTime.now(), "", "") instanceof Book);
     }
 
     @Test
