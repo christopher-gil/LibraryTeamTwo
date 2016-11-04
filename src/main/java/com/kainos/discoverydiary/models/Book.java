@@ -15,6 +15,7 @@ public class Book {
     private Boolean isBorrowed;
     private DateTime borrowedOn;
     private String borrowedBy;
+    private String imageLocation;
 
     public Book() {
     }
@@ -23,7 +24,7 @@ public class Book {
         this.title = title;
     }
 
-    public Book(int id, String title, String category, String author, String publisher, DateTime datePublished, String description, String location) {
+    public Book(int id, String title, String category, String author, String publisher, DateTime datePublished, String description, String location, String imageLocation) {
         this.id = id;
         this.title = title;
         this.category = category;
@@ -32,6 +33,7 @@ public class Book {
         this.datePublished = datePublished;
         this.description = description;
         this.location = location;
+        this.imageLocation = imageLocation;
     }
 
     public int getId() { return id; }
@@ -93,4 +95,8 @@ public class Book {
     public void setBorrowedBy(String borrowedBy) {
         this.borrowedBy = borrowedBy;
     }
+
+    public String getImageLocation() { return imageLocation; }
+
+    public void setImageLocation(String imageLocation) {this.imageLocation = imageLocation;}
 }

@@ -11,16 +11,16 @@ public class BookDataStore {
 
     public void constructBooks() {
         books.add(new Book(1, "Real World SharePoint 2007", "Technical", "Hiller", "Wrox", DateTime.now(),
-                "SharePoint Guide", "Belfast"));
+                "SharePoint Guide", "Belfast", "https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx"));
         books.add(new Book(2, "Windows Command-Line", "Non-technical", "William Stanek", "MK", DateTime.now(),
-                "Windows Command Line Guide", "Belfast"));
+                "Windows Command Line Guide", "Belfast", "https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx"));
         books.add(new Book(3, "Computer Organization And Design", "Technical", "Patterson & Hennessy", "O'Reilly",
                 DateTime.now(), "Discussion of Computer Organisation and Design and the hardware/software interface",
-                "Belfast"));
+                "Belfast", "https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx"));
         books.add(new Book(4, "Perl Cookbook", "Technical", "Christiansen & Torkington", "Mercer", DateTime.now(),
-                "Perl Information and Guidance", "Belfast"));
+                "Perl Information and Guidance", "Belfast", "https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx"));
         books.add(new Book(5, "Marketing", "Non-Technical", "Mercer", "HB", DateTime.now(), "Marketing Treatise",
-                "Belfast"));
+                "Belfast", "https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx"));
     }
 
     private static List<Book> books = Lists.newArrayList();
@@ -43,7 +43,6 @@ public class BookDataStore {
                 }
             }
             return technical;
-
         }
 
     public ArrayList<Book> getNonTechnical(List<Book> allbooks) {
@@ -56,7 +55,6 @@ public class BookDataStore {
             }
         }
         return technical;
-
     }
     }
 
