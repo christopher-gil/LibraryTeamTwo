@@ -3,6 +3,8 @@
         <h1>Book View</h1>
         <p class="lead"> </p>
         <div>
+        <img src="${book.imageLocation}" width="100" height="100">
+        <div>
             <label for="title">Title: </label><span name="title"> ${book.title}</span>
         </div>
         <div>

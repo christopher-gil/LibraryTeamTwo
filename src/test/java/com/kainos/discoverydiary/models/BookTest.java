@@ -26,7 +26,7 @@ public class BookTest {
 
     @Test
     public void bookConstructor_ValidTitle_ReturnsInstanceOfBook(){
-        Assert.assertTrue(new Book(1, "Real World SharePoint 2007", "", "Development", "Wrox", DateTime.now(), "", "") instanceof Book);
+        Assert.assertTrue(new Book(1, "Real World SharePoint 2007", "", "Development", "Wrox", DateTime.now(), "", "", "") instanceof Book);
     }
 
     @Test
