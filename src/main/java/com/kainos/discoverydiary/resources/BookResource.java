@@ -36,7 +36,7 @@ public class BookResource {
         return new BooksListView(bookDataStore.getBooks());
     }
 
-    @Path("/list/{id}")
+    @Path("/{id}")
     @GET
     @Timed
     @Produces(MediaType.TEXT_HTML)
