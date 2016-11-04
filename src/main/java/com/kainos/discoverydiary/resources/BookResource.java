@@ -8,7 +8,6 @@ import com.kainos.discoverydiary.views.BooksListView;
 import io.dropwizard.views.View;
 import jersey.repackaged.com.google.common.collect.Lists;
 import org.assertj.core.util.Strings;
-import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.joda.time.DateTime;
 
 import javax.ws.rs.*;
@@ -47,18 +46,17 @@ public class BookResource {
         return new BooksAddView(new ArrayList<String>());
     }
 
-    @Path("/add")
+    @Path("/addBook")
     @POST
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    @Consumes(MediaType.MULTIPART_FORM_DATA)
-    public View addBook(@FormDataParam("title") String title,
-                        @FormDataParam("category") String category,
-                        @FormDataParam("author") String author,
-                        @FormDataParam("publisher") String publisher,
-                        @FormDataParam("datePublished") String datePublished,
-                        @FormDataParam("description") String description,
-                        @FormDataParam("location") String location) {
+    public View addBook(@FormParam("title") String title,
+                        @FormParam("category") String category,
+                        @FormParam("author") String author,
+                        @FormParam("publisher") String publisher,
+                        @FormParam("datePublished") String datePublished,
+                        @FormParam("description") String description,
+                        @FormParam("location") String location) {
 
         List<String> errors = Lists.newArrayList();
 

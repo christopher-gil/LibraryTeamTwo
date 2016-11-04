@@ -5,7 +5,7 @@
 <h1>Add a Learning Resource</h1>
 <p class="lead">Please provide details of the resource.</p>
 
-<form enctype="multipart/form-data" action="/book/add" method="post" autocomplete="off">
+<form enctype="multipart/form-data" action="/book/addBook" method="post" autocomplete="off">
 
     <#if errors??>
         <div class="bg-danger text-danger">

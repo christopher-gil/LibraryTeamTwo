@@ -1,15 +1,19 @@
 package com.kainos.discoverydiary;
 
-import com.google.common.collect.Lists;
 import com.kainos.discoverydiary.models.Book;
 import org.joda.time.DateTime;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BookDataStore {
 
-    private static List<Book> books = Lists.newArrayList();
+    private static List<Book> books;
     private static int id =0;
+
+    public BookDataStore(){
+        books = new ArrayList<>();
+    }
 
     public List<Book> getBooks() {
         return books;
