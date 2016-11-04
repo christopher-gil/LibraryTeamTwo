@@ -23,7 +23,14 @@ public class Book {
         this.title = title;
     }
 
-    public Book(int id, String title, String category, String author, String publisher, DateTime datePublished, String description, String location) {
+    public Book(int id,
+                String title,
+                String category,
+                String author,
+                String publisher,
+                DateTime datePublished,
+                String description,
+                String location) {
         this.id = id;
         this.title = title;
         this.category = category;
