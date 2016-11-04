@@ -12,6 +12,9 @@ public class Book {
     private DateTime datePublished;
     private String description;
     private String location;
+    private Boolean isBorrowed;
+    private DateTime borrowedOn;
+    private String borrowedBy;
 
     public Book() {
     }
@@ -66,4 +69,28 @@ public class Book {
     public String getLocation() { return location; }
 
     public void setLocation(String location) { this.location = location; }
+
+    public Boolean getBorrowed() {
+        return isBorrowed;
+    }
+
+    public void setBorrowed(Boolean borrowed) {
+        isBorrowed = borrowed;
+    }
+
+    public DateTime getBorrowedOn() {
+        return borrowedOn;
+    }
+
+    public void setBorrowedOn(DateTime borrowedOn) {
+        this.borrowedOn = borrowedOn;
+    }
+
+    public String getBorrowedBy() {
+        return borrowedBy;
+    }
+
+    public void setBorrowedBy(String borrowedBy) {
+        this.borrowedBy = borrowedBy;
+    }
 }
