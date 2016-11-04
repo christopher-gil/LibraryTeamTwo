@@ -47,6 +47,28 @@ public class BookResourceTest {
     }
 
     @Test
+    public void TestTechnicalListPopulatedReturnsOK() {
+
+        Response response = resources.client()
+                .target("/book/technical")
+                .request(MediaType.TEXT_HTML_TYPE)
+                .get();
+
+        assertEquals(200, response.getStatus());
+    }
+
+    @Test
+    public void TestNonTechnicalListPopulatedReturnsOK() {
+
+        Response response = resources.client()
+                .target("/book/nonTechnical")
+                .request(MediaType.TEXT_HTML_TYPE)
+                .get();
+
+        assertEquals(200, response.getStatus());
+    }
+
+    @Test
     public void checkBookListNotEmpty(){
         boolean result;
         bookResource = new BookResource(bookDataStore);

@@ -71,4 +71,21 @@ public class BookResource {
         URI uri = UriBuilder.fromUri("/book/" + id).build();
         return Response.seeOther(uri).build();
     }
+
+    @Path("/technical")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public View technicalResources() {
+
+        return new BooksListView(bookDataStore.getTechnical(bookDataStore.getBooks()));
+    }
+
+    @Path("/nonTechnical")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public View nontechnical() {
+        return new BooksListView(bookDataStore.getNonTechnical(bookDataStore.getBooks()));
+    }
 }
