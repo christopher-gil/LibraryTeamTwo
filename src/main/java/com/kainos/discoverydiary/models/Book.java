@@ -70,11 +70,11 @@ public class Book {
 
     public void setLocation(String location) { this.location = location; }
 
-    public Boolean getBorrowed() {
+    public Boolean getIsBorrowed() {
         return isBorrowed;
     }
 
-    public void setBorrowed(Boolean borrowed) {
+    public void setIsBorrowed(Boolean borrowed) {
         isBorrowed = borrowed;
     }
 
