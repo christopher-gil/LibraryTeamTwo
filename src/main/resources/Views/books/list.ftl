@@ -1,4 +1,4 @@
-<#-- @ftlvariable name="" type="com.kainos.discoverydiary.views.PeopleListView" -->
+<#-- @ftlvariable name="" type="com.kainos.discoverydiary.views.BooksListView" -->
 <#import "../layout.ftl" as layoutTemplate>
 
 <@layoutTemplate.layout>
