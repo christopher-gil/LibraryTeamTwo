@@ -61,7 +61,7 @@ public class Book {
 
     public void setPublisher(String publisher) { this.publisher = publisher; }
 
-    public DateTime getDatePublished() { return datePublished; }
+    public String getDatePublished() { return datePublished.toString("dd/MM/yyyy"); }
 
     public void setDatePublished(DateTime datePublished) { this.datePublished = datePublished; }
 

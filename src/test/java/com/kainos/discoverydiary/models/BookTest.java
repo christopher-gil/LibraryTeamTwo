@@ -46,8 +46,9 @@ public class BookTest {
     @Test
     public void setterAndGetter_ValidDatePublished_ReturnsValidDatePublished() {
         DateTime date = new DateTime(2013, 11, 15, 8,0, 0);
+        String expectedDate = "15/11/2013";
         book.setDatePublished(date);
-        Assert.assertEquals(date, book.getDatePublished());
+        Assert.assertEquals(expectedDate, book.getDatePublished());
     }
 
     @Test
