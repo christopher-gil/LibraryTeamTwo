@@ -1,23 +1,20 @@
-<#-- @ftlvariable name="" type="com.kainos.discoverydiary.views.PeopleListView" -->
+<#-- @ftlvariable name="" type="com.kainos.discoverydiary.views.BooksListView" -->
     <#import "../layout.ftl" as layoutTemplate>
-
         <@layoutTemplate.layout>
-
-<table class="table" id="table">
-    <thead>
-        <th>Title</th>
-    </thead>
+            <table class="table" id="table">
+                <thead>
+                    <th>Title</th>
+                </thead>
                 <tbody>
                     <#list books as book>
-                            <tr>
-                                  <td>
-                                      <a href="/book/${book.id}">${book.title}</a>
-                                  </td>
-                            </tr>
+                        <tr>
+                            <td>
+                                <a href="/book/${book.id}">${book.title}</a>
+                            </td>
+                        </tr>
                     </#list>
 
                 </tbody>
             </table>
-<a class="btn btn-default" href="/people/add">New</a>
-<script src="/assets/js/Booklist.js"></script>
+            <script src="/assets/js/Booklist.js"></script>
 </@layoutTemplate.layout>
