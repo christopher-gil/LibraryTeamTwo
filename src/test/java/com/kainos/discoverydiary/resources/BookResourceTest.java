@@ -58,9 +58,4 @@ public class BookResourceTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test
-    public void getBook_ValidId_ReturnsBook(){
-        bookResource = new BookResource(bookDataStore);
-        Assert.assertTrue(bookResource.getBook(1) instanceof View);
-    }
 }
