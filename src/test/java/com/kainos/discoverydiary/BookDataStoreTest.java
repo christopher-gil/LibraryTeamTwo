@@ -14,18 +14,15 @@ import static org.junit.Assert.*;
  */
 public class BookDataStoreTest {
 
+    private BookDataStore bookDataStore;
 
-    BookDataStore bookDataStore;
     @Before
     public void setup(){
         bookDataStore = new BookDataStore();
     }
 
-
     @Test
     public void getBooks_exists_returnsInstanceOfArrayList(){
         Assert.assertTrue(bookDataStore.getBooks() instanceof ArrayList);
     }
-
-
 }
