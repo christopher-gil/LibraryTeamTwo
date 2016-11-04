@@ -3,7 +3,8 @@
 
 <@layoutTemplate.layout>
 
-<table class="table">
+<table class="table" id="table">
+
     <thead>
         <th>Title</th>
     </thead>
@@ -20,5 +21,9 @@
 
     </tbody>
 </table>
+
+<a class="btn btn-default" href="/people/add">New</a>
+
+<script src="/assets/js/Booklist.js"></script>
 
 </@layoutTemplate.layout>
