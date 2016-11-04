@@ -1,8 +1,0 @@
-Package: DiscoveryDiary
-Version: 1
-Section: misc
-Priority: low
-Architecture: all
-Description:  (Dropwizard Application)
-Maintainer: Unspecified
-Depends: openjdk-7-jdk 
