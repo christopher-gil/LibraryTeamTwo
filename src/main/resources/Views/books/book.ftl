@@ -20,5 +20,16 @@
         <div>
             <label for="location">Location: </label><span name="location"> ${book.location}</span>
         </div>
+
+        <#if book.isBorrowed == true>
+        <div>
+          <label for "bookIsBorrowedBy"> ${book.borrowedBy} </label>
+            <form enctype="multipart/form-data" action="/book/return" method="post" autocomplete="off">
+              <input type = "hidden" value = "${book.id}" name = "id">
+              <button type = "submit"> Return </button>
+            </form>
+        </div>
+        <#else>
+        </#if>
         <a href="/book/list/">Back</a>
     </@layoutTemplate.layout>
