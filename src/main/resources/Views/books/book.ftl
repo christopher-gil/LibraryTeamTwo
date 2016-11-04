@@ -21,9 +21,9 @@
             <label for="location">Location: </label><span name="location"> ${book.location}</span>
         </div>
         <div>
-            <form action="/book/borrow" id="borrow_form" name="borrow_form" method="get">
+            <form action="/book/borrow" id="borrow_form" class="btn" name="borrow_form" method="post">
               <label for="borrower">Borrower: </lable><input type="text" name="borrower" id="borrower">
-                <input type="hidden" value="${book.id}" id="id">
+                <input type="hidden" value="${book.id}" name="id">
                 <button class="form_button" type="submit">Borrow</button>
             </form>
         </div>

@@ -67,6 +67,6 @@ public class BookResourceTest {
     @Test
     public void borrow_ValidDetails_View(){
         bookResource = new BookResource(bookDataStore);
-        //bookResource.borrow("Conor",3);
+        Assert.assertTrue(bookResource.borrow("Conor", 1) instanceof Response);
     }
 }

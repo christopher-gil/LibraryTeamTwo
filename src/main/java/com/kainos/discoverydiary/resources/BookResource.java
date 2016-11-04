@@ -13,6 +13,9 @@ import org.slf4j.LoggerFactory;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
+import java.net.URI;
 
 /**
  * Created by ciaram on 03/11/2016.
@@ -44,14 +47,15 @@ public class BookResource {
     }
 
     @Path("/borrow")
-    @GET
+    @POST
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View borrow(@FormParam("borrower") String borrower, @FormParam("id") int id){
+    public Response borrow(@FormParam("borrower") String borrower, @FormParam("id") int id){
         Book book = bookDataStore.getBook(id);
-        book.setBorrowed(true);
+        book.setIsBorrowed(true);
         book.setBorrowedOn(DateTime.now());
         book.setBorrowedBy(borrower);
-        return new BookView(book);
+        URI uri = UriBuilder.fromUri("/book/"+id).build();
+        return Response.seeOther(uri).build();
     }
 }
