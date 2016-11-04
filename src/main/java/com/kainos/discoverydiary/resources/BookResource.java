@@ -7,14 +7,15 @@ import com.kainos.discoverydiary.views.BookView;
 import com.kainos.discoverydiary.views.BooksListView;
 import com.kainos.discoverydiary.views.AdvancedSearchView;
 import io.dropwizard.views.View;
+import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
+import java.net.URI;
 
 /**
  * Created by ciaram on 03/11/2016.
@@ -37,37 +38,42 @@ public class BookResource {
         return new AdvancedSearchView();
       }
 
-
-    @Path("/list")
-    @GET
+    @Path("/advancedSearch")
+    @POST
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View bookList() {
-        return new BooksListView(bookDataStore.getBooks());
-    }
+    public View advancedSearchCall(@FormParam("authorValue") String authorValue,
+                                   @FormParam("publicationValue") String publicationValue,
+                                   @FormParam("descriptionValue") String descriptionValue,
+                                   @FormParam("categoryValue") String categoryValue
+    ){
+
+        DateTime datePublishedToDateTime = DateTime.parse(publicationValue); //2016-01-01
+
+        // LOGGER.info("Registering person " + String.format("id: %s name: %s age: %s", idForNewPerson, name, age));
+        bookDataStore.getSearchedBooks(authorValue, datePublishedToDateTime, descriptionValue, categoryValue);
+
+        URI uri = UriBuilder.fromUri("/book/list").build();
+        Response response = Response.seeOther(uri).build();
+        throw new WebApplicationException(response); // valid way to redirect in dropwizard
+
+   }
 
     @Path("/{id}")
     @GET
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View getBook(@PathParam("id") int id) {
+    public View getBook(@PathParam("id") int id){
         return new BookView(bookDataStore.getBook(id));
     }
 
-    @Path("/technical")
+
+    @Path("/list")
     @GET
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View technicalResources() {
+    public View bookList(){
 
-        return new BooksListView(bookDataStore.getTechnical(bookDataStore.getBooks()));
-    }
-
-    @Path("/nonTechnical")
-    @GET
-    @Timed
-    @Produces(MediaType.TEXT_HTML)
-    public View nontechnical() {
-        return new BooksListView(bookDataStore.getNonTechnical(bookDataStore.getBooks()));
+        return new BooksListView(bookDataStore.getBooks());
     }
 }
