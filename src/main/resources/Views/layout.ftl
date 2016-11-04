@@ -37,7 +37,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/book/list">Books</a></li>
+            <li><a href="/book/list">All</a></li>
+            <li><a href="/book/technical">Technical</a></li>
+            <li><a href="/book/nonTechnical">Non-Technical</a></li>
             <li><a href="/book/advancedSearch">Advanced Search</a></li>
           </ul>
         </div><!--/.nav-collapse -->

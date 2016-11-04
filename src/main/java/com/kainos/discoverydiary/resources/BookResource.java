@@ -42,7 +42,7 @@ public class BookResource {
     @GET
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View bookList(){
+    public View bookList() {
         return new BooksListView(bookDataStore.getBooks());
     }
 
@@ -50,7 +50,24 @@ public class BookResource {
     @GET
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View getBook(@PathParam("id") int id){
+    public View getBook(@PathParam("id") int id) {
         return new BookView(bookDataStore.getBook(id));
+    }
+
+    @Path("/technical")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public View technicalResources() {
+
+        return new BooksListView(bookDataStore.getTechnical(bookDataStore.getBooks()));
+    }
+
+    @Path("/nonTechnical")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public View nontechnical() {
+        return new BooksListView(bookDataStore.getNonTechnical(bookDataStore.getBooks()));
     }
 }
