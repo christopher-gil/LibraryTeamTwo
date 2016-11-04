@@ -3,6 +3,7 @@ package com.kainos.discoverydiary.resources;
 import com.codahale.metrics.annotation.Timed;
 import com.kainos.discoverydiary.BookDataStore;
 import com.kainos.discoverydiary.config.DiscoveryDiaryConfiguration;
+import com.kainos.discoverydiary.models.Book;
 import com.kainos.discoverydiary.views.BookView;
 import com.kainos.discoverydiary.views.BooksListView;
 import com.kainos.discoverydiary.views.AdvancedSearchView;
@@ -38,10 +39,11 @@ public class BookResource {
         return new AdvancedSearchView();
       }
 
-    @Path("/advancedSearch")
+    @Path("/search")
     @POST
     @Timed
     @Produces(MediaType.TEXT_HTML)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public View advancedSearchCall(@FormParam("authorValue") String authorValue,
                                    @FormParam("publicationValue") String publicationValue,
                                    @FormParam("descriptionValue") String descriptionValue,
@@ -59,6 +61,32 @@ public class BookResource {
 
    }
 
+    @Path("/borrow")
+    @POST
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public Response borrow(@FormParam("borrower") String borrower, @FormParam("idBorrow") int id) {
+        Book book = bookDataStore.getBook(id);
+        book.setIsBorrowed(true);
+        book.setBorrowedOn(DateTime.now());
+        book.setBorrowedBy(borrower);
+        URI uri = UriBuilder.fromUri("/book/" + id).build();
+        return Response.seeOther(uri).build();
+    }
+
+    @Path("/return")
+    @POST
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public Response returnBook(@FormParam("idReturn") int id) {
+        Book book = bookDataStore.getBook(id);
+        book.setIsBorrowed(false);
+        book.setBorrowedOn(null);
+        book.setBorrowedBy(null);
+        URI uri = UriBuilder.fromUri("/book/" + id).build();
+        return Response.seeOther(uri).build();
+    }
+
     @Path("/{id}")
     @GET
     @Timed
@@ -75,5 +103,22 @@ public class BookResource {
     public View bookList(){
 
         return new BooksListView(bookDataStore.getBooks());
+    }
+
+    @Path("/technical")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public View technicalResources() {
+
+        return new BooksListView(bookDataStore.getTechnical(bookDataStore.getBooks()));
+    }
+
+    @Path("/nonTechnical")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public View nontechnical() {
+        return new BooksListView(bookDataStore.getNonTechnical(bookDataStore.getBooks()));
     }
 }

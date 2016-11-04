@@ -20,5 +20,27 @@
         <div>
             <label for="location">Location: </label><span name="location"> ${book.location}</span>
         </div>
+        <#if book.isBorrowed == true>
+            <div>
+                <div>
+                    <label for="bookIsBorrowedBy">Borrower: </label><span name="bookIsBorrowedBy"> ${book.borrowedBy}</span>
+                </div>
+                <div>
+                    <label for="borrowDate">Date Borrowed:</label><span name="borrowDate"> ${book.borrowedOn}</span>
+                </div>
+                <form action="/book/return" method="post" name="return_form">
+                    <input type="hidden" value="${book.id}" name="idReturn">
+                    <button type="submit" class="btn"> Return </button>
+                </form>
+            </div>
+            <#else>
+                <div>
+                    <form action="/book/borrow" id="borrow_form" name="borrow_form" method="post">
+                        <label for="borrower">Borrower: </lable><input type="text" name="borrower" id="borrower">
+                <input type="hidden" value="${book.id}" name="idBorrow">
+                <button class="form_button" type="submit" class="btn">Borrow</button>
+            </form>
+        </div>
+        </#if>
         <a href="/book/list/">Back</a>
     </@layoutTemplate.layout>
