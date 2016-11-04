@@ -3,16 +3,15 @@ package com.kainos.discoverydiary.resources;
 import com.codahale.metrics.annotation.Timed;
 import com.kainos.discoverydiary.BookDataStore;
 import com.kainos.discoverydiary.config.DiscoveryDiaryConfiguration;
+import com.kainos.discoverydiary.models.Book;
 import com.kainos.discoverydiary.views.BookView;
 import com.kainos.discoverydiary.views.BooksListView;
 import io.dropwizard.views.View;
+import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -42,5 +41,17 @@ public class BookResource {
     @Produces(MediaType.TEXT_HTML)
     public View getBook(@PathParam("id") int id){
         return new BookView(bookDataStore.getBook(id));
+    }
+
+    @Path("/borrow")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public View borrow(@FormParam("borrower") String borrower, @FormParam("id") int id){
+        Book book = bookDataStore.getBook(id);
+        book.setBorrowed(true);
+        book.setBorrowedOn(DateTime.now());
+        book.setBorrowedBy(borrower);
+        return new BookView(book);
     }
 }
