@@ -6,6 +6,7 @@ import com.kainos.discoverydiary.config.DiscoveryDiaryConfiguration;
 import com.kainos.discoverydiary.models.Book;
 import com.kainos.discoverydiary.views.BookView;
 import com.kainos.discoverydiary.views.BooksListView;
+import com.kainos.discoverydiary.views.AdvancedSearchView;
 import io.dropwizard.views.View;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
@@ -30,21 +31,35 @@ public class BookResource {
         bookDataStore.constructBooks();
     }
 
-    @Path("/list")
+    @Path("/advancedSearch")
     @GET
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View bookList() {
-        return new BooksListView(bookDataStore.getBooks());
-    }
+      public View advancedSearch(){
+        return new AdvancedSearchView();
+      }
 
-    @Path("/{id}")
-    @GET
+    @Path("/search")
+    @POST
     @Timed
     @Produces(MediaType.TEXT_HTML)
-    public View getBook(@PathParam("id") int id) {
-        return new BookView(bookDataStore.getBook(id));
-    }
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public View advancedSearchCall(@FormParam("authorValue") String authorValue,
+                                   @FormParam("publicationValue") String publicationValue,
+                                   @FormParam("descriptionValue") String descriptionValue,
+                                   @FormParam("categoryValue") String categoryValue
+    ){
+
+        DateTime datePublishedToDateTime = DateTime.parse(publicationValue); //2016-01-01
+
+        // LOGGER.info("Registering person " + String.format("id: %s name: %s age: %s", idForNewPerson, name, age));
+        bookDataStore.getSearchedBooks(authorValue, datePublishedToDateTime, descriptionValue, categoryValue);
+
+        URI uri = UriBuilder.fromUri("/book/list").build();
+        Response response = Response.seeOther(uri).build();
+        throw new WebApplicationException(response); // valid way to redirect in dropwizard
+
+   }
 
     @Path("/borrow")
     @POST
@@ -70,6 +85,24 @@ public class BookResource {
         book.setBorrowedBy(null);
         URI uri = UriBuilder.fromUri("/book/" + id).build();
         return Response.seeOther(uri).build();
+    }
+
+    @Path("/{id}")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public View getBook(@PathParam("id") int id){
+        return new BookView(bookDataStore.getBook(id));
+    }
+
+
+    @Path("/list")
+    @GET
+    @Timed
+    @Produces(MediaType.TEXT_HTML)
+    public View bookList(){
+
+        return new BooksListView(bookDataStore.getBooks());
     }
 
     @Path("/technical")
