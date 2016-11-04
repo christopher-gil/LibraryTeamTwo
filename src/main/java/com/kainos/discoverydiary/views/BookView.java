@@ -18,5 +18,4 @@ public class BookView extends View {
     public Book getBook() {
         return book;
     }
-
 }

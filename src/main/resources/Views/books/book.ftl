@@ -1,5 +1,5 @@
 <#import "../layout.ftl" as layoutTemplate>
-<@layoutTemplate.layout>
+    <@layoutTemplate.layout>
         <h1>Book View</h1>
         <p class="lead"> </p>
         <div>
@@ -17,5 +17,8 @@
         <div>
             <label for="description">Description: </label><span name="description"> ${book.description}</span>
         </div>
-        <a href="/book/list/">Back</a> 
-</@layoutTemplate.layout>
+        <div>
+            <label for="location">Location: </label><span name="location"> ${book.location}</span>
+        </div>
+        <a href="/book/list/">Back</a>
+    </@layoutTemplate.layout>
