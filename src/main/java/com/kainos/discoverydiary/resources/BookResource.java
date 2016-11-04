@@ -23,6 +23,7 @@ public class BookResource {
 
     public BookResource(BookDataStore bookDataStore) {
         this.bookDataStore = bookDataStore;
+        bookDataStore.constructBooks();
     }
 
     @Path("/list")
@@ -30,7 +31,7 @@ public class BookResource {
     @Timed
     @Produces(MediaType.TEXT_HTML)
     public View bookList(){
-        bookDataStore.constructBooks();
+
         return new BooksListView(bookDataStore.getBooks());
     }
 }
