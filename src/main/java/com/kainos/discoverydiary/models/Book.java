@@ -17,10 +17,12 @@ public class Book {
     private String borrowedBy;
 
     public Book() {
+        this.isBorrowed = false;
     }
 
     public Book(String title){
         this.title = title;
+        this.isBorrowed = false;
     }
 
     public Book(int id, String title, String category, String author, String publisher, DateTime datePublished, String description, String location) {
@@ -32,6 +34,7 @@ public class Book {
         this.datePublished = datePublished;
         this.description = description;
         this.location = location;
+        this.isBorrowed = false;
     }
 
     public int getId() { return id; }

@@ -47,6 +47,28 @@ public class BookResourceTest {
     }
 
     @Test
+    public void TestTechnicalListPopulatedReturnsOK() {
+
+        Response response = resources.client()
+                .target("/book/technical")
+                .request(MediaType.TEXT_HTML_TYPE)
+                .get();
+
+        assertEquals(200, response.getStatus());
+    }
+
+    @Test
+    public void TestNonTechnicalListPopulatedReturnsOK() {
+
+        Response response = resources.client()
+                .target("/book/nonTechnical")
+                .request(MediaType.TEXT_HTML_TYPE)
+                .get();
+
+        assertEquals(200, response.getStatus());
+    }
+
+    @Test
     public void checkBookListNotEmpty(){
         boolean result;
         bookResource = new BookResource(bookDataStore);
@@ -62,5 +84,11 @@ public class BookResourceTest {
     public void getBook_ValidId_ReturnsBook(){
         bookResource = new BookResource(bookDataStore);
         Assert.assertTrue(bookResource.getBook(1) instanceof View);
+    }
+
+    @Test
+    public void borrow_ValidDetails_View(){
+        bookResource = new BookResource(bookDataStore);
+        Assert.assertTrue(bookResource.borrow("Conor", 1) instanceof Response);
     }
 }
