@@ -5,7 +5,7 @@
 
 <h1>Book list</h1>
 
-<table class="table">
+<table class="table" id="table">
     <thead>
         <th>Title</th>
     </thead>
@@ -25,6 +25,6 @@
 
 <a class="btn btn-default" href="/people/add">New</a>
 
-    <script src="/assets/js/Booklist.js"></script>
+<script src="/assets/js/Booklist.js"></script>
 
 </@layoutTemplate.layout>
