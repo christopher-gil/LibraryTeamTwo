@@ -21,6 +21,8 @@ public class BookDataStore {
         return books;
     }
 
-
+    public Book getBook(int id){
+        return books.stream().filter(b -> b.getId()==id).findFirst().get();
+    }
 
 }
